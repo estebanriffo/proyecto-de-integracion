@@ -4,7 +4,7 @@
 
 {% load crispy_forms_tags %}
 
-<h3>Iniciar Sesion</h3>
+<h3>Registrarse</h3>
 
 <br>
 
@@ -12,10 +12,9 @@
     {% csrf_token %}
     <div class="card mx-auto" style="width: 24rem;">
   <div class="card-body">
-    <h5 class="card-title">Ingrese sus credenciales</h5>
+    <h5 class="card-title">Complete todos los campos</h5>
     {{ form | crispy }}
-    <a href="#" class="card-link">Registrarse</a>
-    <button class="btn-btn-sm btn-primary float-end"  type="submit">Iniciar sesión</button>
+    <button class="btn-btn-sm btn-primary float-end"  type="submit">Registrarse</button>
   </div>
 </div>
 </form>
