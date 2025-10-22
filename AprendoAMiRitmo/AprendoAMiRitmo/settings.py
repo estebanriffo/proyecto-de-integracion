@@ -37,7 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'autentificacion',
+    'crispy_forms',
+    "crispy_bootstrap5",
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -74,8 +80,12 @@ WSGI_APPLICATION = 'AprendoAMiRitmo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'registro',
+        'USER':'root',
+        'PASSWORD': '',
+        'HOST':'localhost',
+        'PORT': 3306,
     }
 }
 
@@ -120,3 +130,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Variables de redireccion de login y logout
+
+LOGIN_REDIRECT_URL ='home'
+LOGOUT_REDIRECT_URL ='home'
